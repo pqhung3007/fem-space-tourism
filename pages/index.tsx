@@ -1,6 +1,9 @@
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   return (
-    <main className="bg-mobile md:bg-tablet lg:bg-desktop bg-cover min-h-screen">
+    <main className="bg-mobile md:bg-tablet lg:bg-desktop bg-cover min-h-screen pb-20">
+      <Navbar />
       <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between max-w-7xl mx-auto px-4 md:px-40 pt-40">
         <div className="space-y-8 text-center lg:text-left">
           <h1 className="text-indigo-100 font-sanCondensed text-3xl lg:text-4xl tracking-wider uppercase">
