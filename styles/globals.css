@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.explore:hover {
+  animation: spread 3s infinite;
+}
+
+@keyframes spread {
+  50% {
+    box-shadow: 0 0 0 2rem rgb(214, 211, 209, 0.5);
+  }
+}
