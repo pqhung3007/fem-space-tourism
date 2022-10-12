@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="flex justify-between items-center pl-8 pt-12 pr-8 md:pr-0">
+    <header className="absolute flex justify-between w-full items-center pl-12 pt-6 md:pt-0 lg:pt-12 pr-8 md:pr-0">
       <Link href="/">
         <img src="/assets/shared/logo.svg" alt="" className="w-12 h-12" />
       </Link>
