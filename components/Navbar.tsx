@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const handleOpenMenu = (e: React.MouseEvent) => {
     setOpen(!open);
@@ -17,25 +19,44 @@ export default function Navbar() {
       </Link>
 
       <nav className="hidden md:block">
-        <div className="flex space-x-8 px-16 h-24 bg-white/20 backdrop-blur-sm font-sanCondensed tracking-[3px] relative">
+        <div className="flex space-x-8 px-16 h-24 text-indigo-100 bg-white/20 backdrop-blur-sm font-sanCondensed tracking-[3px] relative">
           <Link href="/">
-            <a className="uppercase border-b-2 border-white flex items-center h-full text-white/75 hover:text-white duration-200">
+            <a
+              className={`uppercase flex items-center h-full hover:text-white duration-200 ${
+                router.pathname === "/" && " border-b-2 border-white text-white"
+              }`}
+            >
               <span className="font-bold mr-2 hidden lg:inline">00</span> Home
             </a>
           </Link>
           <Link href="/destination">
-            <a className="uppercase flex items-center text-white/75 hover:text-white duration-200">
+            <a
+              className={`uppercase flex items-center h-full hover:text-white duration-200 ${
+                router.pathname === "/destination" &&
+                " border-b-2 border-white text-white"
+              }`}
+            >
               <span className="font-bold mr-2 hidden lg:inline">01</span>
               Destination
             </a>
           </Link>
           <Link href="/crew">
-            <a className="uppercase flex items-center text-white/75 hover:text-white duration-200">
+            <a
+              className={`uppercase flex items-center h-full hover:text-white duration-200 ${
+                router.pathname === "/crew" &&
+                " border-b-2 border-white text-white"
+              }`}
+            >
               <span className="font-bold mr-2 hidden lg:inline">02</span>crew
             </a>
           </Link>
           <Link href="/technology">
-            <a className="uppercase flex items-center text-white/75 hover:text-white duration-200">
+            <a
+              className={`uppercase flex items-center h-full hover:text-white duration-200 ${
+                router.pathname === "/technology" &&
+                " border-b-2 border-white text-white"
+              }`}
+            >
               <span className="font-bold mr-2 hidden lg:inline">03</span>
               technology
             </a>
