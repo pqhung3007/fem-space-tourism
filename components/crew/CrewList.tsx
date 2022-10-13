@@ -19,7 +19,7 @@ export default function CrewList({ crew }) {
         <title>Crew</title>
       </Head>
 
-      <div className="max-w-7xl mx-auto px-8 md:px-32 lg:pr-0 pb-24 md:pb-0 pt-32 lg:pt-48">
+      <div className="max-w-7xl mx-auto px-8 md:px-32 pb-24 md:pb-0 pt-32 lg:pt-48">
         <h1 className="text-indigo-100 uppercase text-lg lg:text-3xl tracking-[4px] font-sanCondensed mb-8">
           <span className="text-gray-500 font-bold mr-2 lg:mr-4">02</span>
           meet your crew

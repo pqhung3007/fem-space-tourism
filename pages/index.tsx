@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             </p>
           </div>
           <button className="uppercase text-3xl text-center font-serif tracking-wider bg-white rounded-full w-48 h-48 md:w-60 md:h-60 mt-28 explore">
-            Explore
+            <Link href="/destination">Explore</Link>
           </button>
         </div>
       </main>

@@ -15,12 +15,16 @@ export default function Navbar() {
   return (
     <header className="absolute flex justify-between w-full items-center pl-12 pt-6 md:pt-0 lg:pt-12 pr-8 md:pr-0">
       <Link href="/">
-        <img src="/assets/shared/logo.svg" alt="" className="w-12 h-12" />
+        <img
+          src="/assets/shared/logo.svg"
+          alt=""
+          className="w-12 h-12 cursor-pointer"
+        />
       </Link>
 
       <nav className="hidden md:block">
         <div className="flex space-x-8 px-16 h-24 text-indigo-100 bg-white/20 backdrop-blur-sm font-sanCondensed tracking-[3px] relative">
-          <Link href="/">
+          <Link href="/" passHref>
             <a
               className={`uppercase flex items-center h-full hover:text-white duration-200 ${
                 router.pathname === "/" && " border-b-2 border-white text-white"
@@ -29,7 +33,7 @@ export default function Navbar() {
               <span className="font-bold mr-2 hidden lg:inline">00</span> Home
             </a>
           </Link>
-          <Link href="/destination">
+          <Link href="/destination" passHref>
             <a
               className={`uppercase flex items-center h-full hover:text-white duration-200 ${
                 router.pathname === "/destination" &&
@@ -40,7 +44,7 @@ export default function Navbar() {
               Destination
             </a>
           </Link>
-          <Link href="/crew">
+          <Link href="/crew" passHref>
             <a
               className={`uppercase flex items-center h-full hover:text-white duration-200 ${
                 router.pathname === "/crew" &&
@@ -50,7 +54,7 @@ export default function Navbar() {
               <span className="font-bold mr-2 hidden lg:inline">02</span>crew
             </a>
           </Link>
-          <Link href="/technology">
+          <Link href="/technology" passHref>
             <a
               className={`uppercase flex items-center h-full hover:text-white duration-200 ${
                 router.pathname === "/technology" &&

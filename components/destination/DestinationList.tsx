@@ -20,7 +20,7 @@ export default function DestinationList({ destinations }) {
         <title>Destinations</title>
       </Head>
 
-      <div className="max-w-7xl mx-auto px-8 md:px-40 pb-32 pt-32 lg:pt-48">
+      <div className="max-w-7xl mx-auto px-8 md:px-32 pb-32 pt-32 lg:pt-48">
         <h1 className="text-indigo-100 uppercase text-lg lg:text-3xl tracking-[4px] font-sanCondensed mb-8">
           <span className="text-gray-500 font-bold mr-2 lg:mr-4">01</span>pick
           your destination
@@ -37,7 +37,9 @@ export default function DestinationList({ destinations }) {
                 <button
                   key={index}
                   className={`text-indigo-100 font-sanCondensed uppercase tracking-widest pb-2 ${
-                    index === order && "text-white border-b-2"
+                    index === order
+                      ? "text-white border-b-2"
+                      : "text-indigo-100"
                   }`}
                   onClick={() => setOrder(index)}
                 >
