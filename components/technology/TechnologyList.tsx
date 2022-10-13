@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { Technology } from "../../models";
+import { imageFade, textSlide } from "../../utils/motion";
 
 export default function TechnologyList({ technologies }) {
   const [order, setOrder] = useState(0);
@@ -25,10 +28,15 @@ export default function TechnologyList({ technologies }) {
 
         {/* main container */}
         <div className="flex flex-col lg:flex-row-reverse justify-center items-center space-y-6 lg:space-y-0">
-          <picture>
+          <motion.picture
+            key={landscape}
+            variants={imageFade}
+            initial="hide"
+            animate="show"
+          >
             <source srcSet={portrait} media="(min-width: 1024px) " />
             <img src={landscape} alt="" />
-          </picture>
+          </motion.picture>
 
           <div className="flex flex-col lg:flex-row justify-center gap-12 lg:mr-20">
             {/* Buttons */}
@@ -49,7 +57,13 @@ export default function TechnologyList({ technologies }) {
             </div>
 
             {/* Info */}
-            <div className="flex flex-col space-y-6 px-8 lg:px-0">
+            <motion.div
+              className="flex flex-col space-y-6 px-8 lg:px-0"
+              key={name}
+              variants={textSlide}
+              initial="hide"
+              animate="show"
+            >
               <div className="text-center lg:text-left">
                 <small className="font-sanCondensed text-indigo-100 uppercase text-lg tracking-wider">
                   the terminology...
@@ -62,7 +76,7 @@ export default function TechnologyList({ technologies }) {
               <p className=" text-indigo-100 leading-relaxed text-center lg:text-left lg:text-lg max-w-md">
                 {description}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

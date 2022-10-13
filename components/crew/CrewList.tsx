@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { Crew } from "../../models";
+import { imageFade, textSlide } from "../../utils/motion";
 
 export default function CrewList({ crew }) {
   const [order, setOrder] = useState(0);
@@ -27,7 +29,15 @@ export default function CrewList({ crew }) {
 
         {/* main container */}
         <div className="flex flex-col md:flex-col-reverse justify-center items-center lg:flex-row-reverse space-y-6 md:space-y-0">
-          <img src={png} alt="" className="w-64 md:w-full mx-auto" />
+          <motion.img
+            key={png}
+            src={png}
+            alt=""
+            className="w-64 md:w-full mx-auto"
+            variants={imageFade}
+            initial="hide"
+            animate="show"
+          />
 
           <div className="flex flex-col md:flex-col-reverse gap-8 lg:mr-8">
             {/* Order */}
@@ -44,7 +54,13 @@ export default function CrewList({ crew }) {
             </div>
 
             {/* Info */}
-            <div className="space-y-6">
+            <motion.div
+              className="space-y-6"
+              key={name}
+              variants={textSlide}
+              initial="hide"
+              animate="show"
+            >
               <h2 className="flex flex-col gap-2 text-white text-center lg:text-left font-serif uppercase text-3xl lg:text-5xl">
                 <span className="text-slate-500 text-xl lg:text-3xl">
                   {role}
@@ -54,7 +70,7 @@ export default function CrewList({ crew }) {
               <p className="text-indigo-100 leading-relaxed text-center lg:text-left lg:text-lg">
                 {bio}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

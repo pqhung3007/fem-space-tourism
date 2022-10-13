@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { Destination } from "../../models";
+import { imageFade, textSlide } from "../../utils/motion";
 
 export default function DestinationList({ destinations }) {
   const [order, setOrder] = useState(0);
@@ -28,10 +30,17 @@ export default function DestinationList({ destinations }) {
 
         <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between space-x-0 lg:space-x-16">
           {/* Image */}
-          <img src={png} alt="" />
+          <motion.img
+            key={png}
+            src={png}
+            alt=""
+            variants={imageFade}
+            initial="hide"
+            animate="show"
+          />
 
           {/* Description */}
-          <div className="space-y-8 text-center lg:text-left mt-12">
+          <div>
             <div className="flex space-x-6 justify-center lg:justify-start">
               {destinations.map((destination: Destination, index: number) => (
                 <button
@@ -48,34 +57,42 @@ export default function DestinationList({ destinations }) {
               ))}
             </div>
 
-            <h1 className="font-serif uppercase text-6xl lg:text-8xl text-white">
-              {name}
-            </h1>
-            <p className="text-indigo-100 leading-loose font-sans lg:text-lg">
-              {description}
-            </p>
-            <div className="w-full h-[1px] bg-white/20"></div>
+            <motion.div
+              key={name}
+              variants={textSlide}
+              initial="hide"
+              animate="show"
+              className="space-y-8 text-center lg:text-left mt-12"
+            >
+              <h1 className="font-serif uppercase text-6xl lg:text-8xl text-white">
+                {name}
+              </h1>
+              <p className="text-indigo-100 leading-loose font-sans lg:text-lg">
+                {description}
+              </p>
+              <div className="w-full h-[1px] bg-white/20"></div>
 
-            {/* Statistics */}
-            <div className="flex flex-col md:flex-row justify-center lg:justify-start md:space-x-12 space-y-6 md:space-y-0">
-              <div className="text-center lg:text-left">
-                <h2 className="uppercase text-indigo-100 mb-2 tracking-wider">
-                  avg. distance
-                </h2>
-                <p className="uppercase text-white text-3xl font-serif">
-                  {distance}
-                </p>
-              </div>
+              {/* Statistics */}
+              <div className="flex flex-col md:flex-row justify-center lg:justify-start md:space-x-12 space-y-6 md:space-y-0">
+                <div className="text-center lg:text-left">
+                  <h2 className="uppercase text-indigo-100 mb-2 tracking-wider">
+                    avg. distance
+                  </h2>
+                  <p className="uppercase text-white text-3xl font-serif">
+                    {distance}
+                  </p>
+                </div>
 
-              <div className="text-center lg:text-left">
-                <h2 className="uppercase text-indigo-100 mb-2 tracking-wider">
-                  est. travel time
-                </h2>
-                <p className="uppercase text-white text-3xl font-serif">
-                  {travel}
-                </p>
+                <div className="text-center lg:text-left">
+                  <h2 className="uppercase text-indigo-100 mb-2 tracking-wider">
+                    est. travel time
+                  </h2>
+                  <p className="uppercase text-white text-3xl font-serif">
+                    {travel}
+                  </p>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
