@@ -1,6 +1,7 @@
 import React from "react";
 import CrewList from "../components/crew/CrewList";
 import { Crew } from "../models";
+import { fetchCorrespondingData } from "../utils";
 
 interface ICrew {
   crewData: Crew[];
@@ -15,9 +16,7 @@ export default function crew({ crewData }: ICrew) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  const crewData = data.crew;
+  const crewData = await fetchCorrespondingData<Crew>("crew");
 
   return {
     props: { crewData },

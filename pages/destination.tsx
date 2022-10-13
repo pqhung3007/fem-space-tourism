@@ -1,6 +1,7 @@
 import React from "react";
 import DestinationList from "../components/destination/DestinationList";
 import { Destination } from "../models";
+import { fetchCorrespondingData } from "../utils";
 
 interface IDes {
   destinationData: Destination[];
@@ -15,9 +16,9 @@ export default function destination({ destinationData }: IDes) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  const destinationData = data.destinations;
+  const destinationData = await fetchCorrespondingData<Destination>(
+    "destinations"
+  );
 
   return {
     props: { destinationData },
