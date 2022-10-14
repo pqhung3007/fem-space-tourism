@@ -541,9 +541,9 @@
     "object-keys" "^1.1.1"
 
 "defined@^1.0.0":
-  "integrity" "sha512-Y2caI5+ZwS5c3RiNDJ6u53VhQHv+hHKwhkI1iHvceKUHw9Df6EK2zRLfjejRgMuCuxK7PfSWIMwWecceVvThjQ=="
-  "resolved" "https://registry.npmjs.org/defined/-/defined-1.0.0.tgz"
-  "version" "1.0.0"
+  "integrity" "sha512-hsBd2qSVCRE+5PmNdHt1uzyrFu5d3RwmFDKzyNZMFq/EwDNJF7Ee5+D5oEKF0hU6LhtoUF1macFvOe4AskQC1Q=="
+  "resolved" "https://registry.npmjs.org/defined/-/defined-1.0.1.tgz"
+  "version" "1.0.1"
 
 "detective@^5.2.1":
   "integrity" "sha512-v9XE1zRnz1wRtgurGu0Bs8uHKFSTdteYZNbIPFVhUZ39L/S79ppMpdmVOZAnoz1jfEFodc48n6MX483Xo3t1yw=="
@@ -586,9 +586,9 @@
     "esutils" "^2.0.2"
 
 "electron-to-chromium@^1.4.251":
-  "integrity" "sha512-EpuHPqu8YhonqLBXHoU6hDJCD98FCe6KDoet3/gY1qsQ6usjJoHqBH2YIVs8FXaAtHwVL8Uqa/fsYao/vq9VWQ=="
-  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.276.tgz"
-  "version" "1.4.276"
+  "integrity" "sha512-Dki0WhHNh/br/Xi1vAkueU5mtIc9XLHcMKB6tNfQKk+kPG0TEUjRh5QEMAUbRp30/rYNMFD1zKKvbVzwq/4wmg=="
+  "resolved" "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.282.tgz"
+  "version" "1.4.282"
 
 "emoji-regex@^9.2.2":
   "integrity" "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg=="
@@ -1637,10 +1637,10 @@
   "resolved" "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   "version" "4.2.0"
 
-"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.14", "postcss@^8.4.17", "postcss@>=8.0.9":
-  "integrity" "sha512-UNxNOLQydcOFi41yHNMcKRZ39NeXlr8AxGuZJsdub8vIb12fHzcq37DTU/QtbI6WLxNg2gF9Z+8qtRwTj1UI1Q=="
-  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.17.tgz"
-  "version" "8.4.17"
+"postcss@^8.0.0", "postcss@^8.1.0", "postcss@^8.2.14", "postcss@^8.3.3", "postcss@^8.4.14", "postcss@^8.4.18", "postcss@>=8.0.9":
+  "integrity" "sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA=="
+  "resolved" "https://registry.npmjs.org/postcss/-/postcss-8.4.18.tgz"
+  "version" "8.4.18"
   dependencies:
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
