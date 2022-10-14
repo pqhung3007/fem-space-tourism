@@ -1,7 +1,7 @@
 import React from "react";
 import CrewList from "../components/crew/CrewList";
 import { Crew } from "../models";
-import { fetchCorrespondingData } from "../utils";
+import { fetchCorrespondingData } from "../utils/fetching";
 
 interface ICrew {
   crewData: Crew[];

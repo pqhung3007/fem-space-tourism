@@ -1,7 +1,7 @@
 import React from "react";
 import DestinationList from "../components/destination/DestinationList";
 import { Destination } from "../models";
-import { fetchCorrespondingData } from "../utils";
+import { fetchCorrespondingData } from "../utils/fetching";
 
 interface IDes {
   destinationData: Destination[];

@@ -1,7 +1,7 @@
 import React from "react";
 import TechnologyList from "../components/technology/TechnologyList";
 import { Technology } from "../models";
-import { fetchCorrespondingData } from "../utils/index";
+import { fetchCorrespondingData } from "../utils/fetching";
 
 interface ITech {
   technologyData: Technology[];
